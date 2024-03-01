@@ -24,7 +24,7 @@ const HeroSection = () => {
               sequence={[
                 "Wisdom",
                 1000,
-                "Web Developer",
+                "Software engineer",
                 1000,
                 "Mobile Developer",
                 1000,
@@ -37,8 +37,13 @@ const HeroSection = () => {
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-            voluptuous.
+          I am a driven software engineer and health data analyst passionate about solving complex problems. 
+          My experience and proficiency in programming languages like Java, Python, and C++, 
+          along with my commitment to code quality and project deadlines, make me a valuable asset to any innovative organization. 
+          Additionally, I have expertise in health information management and coding, with strong attention to detail and organizational skills. 
+          Knowledgeable administrative professional with expertise in medical records management, coding and data analysis. 
+          Proven ability to review and document clinical data, ensuring accuracy and compliance. 
+          Well-versed in ICD-11 and other coding systems.
           </p>
           <div>
             <Link
