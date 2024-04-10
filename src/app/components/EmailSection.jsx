@@ -2,6 +2,8 @@
 import React, { useState } from "react";
 import GithubIcon from "../../../public/github-icon.svg";
 import LinkedinIcon from "../../../public/linkedin-icon.svg";
+import WhatsappIcon from "../../../public/whatsapp-icon.svg";
+
 import Link from "next/link";
 import Image from "next/image";
 
@@ -54,6 +56,8 @@ const EmailSection = () => {
           I&apos;m currently looking for new opportunities, my inbox is always
           open. Whether you have a question or just want to say hi, I&apos;ll
           try my best to get back to you!
+          If you need  immediate assistance please email me at {" wisdomdzontoh@gmail.com "}
+          <a href="mailto:wisdomdzontoh@gmail.com?subject=Immediate%20Assistance"> </a>
         </p>
         <div className="socials flex flex-row gap-2">
           <Link href="https://github.com/wisdomdzontoh">
