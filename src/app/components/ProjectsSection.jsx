@@ -8,7 +8,7 @@ const projectsData = [
   {
     id: 1,
     title: "React Portfolio Website",
-    description: "This project was developed to share my projects with stakeholders",
+    description: "This project was developed to share my projects with stakeholders.",
     image: "/images/projects/1.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/wisdomdzontoh/my-portfolio-website",
@@ -16,8 +16,8 @@ const projectsData = [
   },
   {
     id: 2,
-    title: "Electronic Voting systems",
-    description: "This project helps organizations cast thier votes for candidates from anywhere",
+    title: "Electronic Voting System",
+    description: "This project helps organizations cast their votes for candidates from anywhere.",
     image: "/images/projects/2.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/wisdomdzontoh/Automated-Voting-System",
@@ -26,7 +26,7 @@ const projectsData = [
   {
     id: 3,
     title: "E-commerce Application",
-    description: "This project has two separate parts, the frontend and backend.",
+    description: "This project has two separate parts: the frontend and backend.",
     image: "/images/projects/3.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/wisdomdzontoh/react-crud-api-frontend",
@@ -35,7 +35,7 @@ const projectsData = [
   {
     id: 4,
     title: "Food Ordering Application",
-    description: "A food ordering app that was developed to help customers track their oders and avoid going inperson to take food. This project is still in the development phase",
+    description: "A food ordering app developed to help customers track their orders and avoid going in person. This project is still in development.",
     image: "/images/projects/4.png",
     tag: ["All", "Mobile"],
     gitUrl: "https://github.com/wisdomdzontoh/mern-food-ordering-app-frontend",
@@ -43,8 +43,8 @@ const projectsData = [
   },
   {
     id: 5,
-    title: "Laravel Mysql Template",
-    description: "Authentication and CRUD operations in laravel, adding products, deleting product, updating and viewing products",
+    title: "Laravel MySQL Template",
+    description: "Authentication and CRUD operations in Laravel: adding, deleting, updating, and viewing products.",
     image: "/images/projects/5.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/wisdomdzontoh/crud-app",
@@ -52,8 +52,8 @@ const projectsData = [
   },
   {
     id: 6,
-    title: "Electronic medical records system",
-    description: "This project was developed to improve data ccuracy by health facilities in greater accra.In terms of monthly reports generated",
+    title: "Electronic Medical Records System",
+    description: "This project improves data accuracy by health facilities in Greater Accra with monthly report generation.",
     image: "/images/projects/6.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/wisdomdzontoh/Data-link-EMRS",
@@ -80,38 +80,25 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section id="projects">
+    <section id="projects" className="py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
       <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
         My Projects
       </h2>
       <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
-        <ProjectTag
-          onClick={handleTagChange}
-          name="All"
-          isSelected={tag === "All"}
-        />
-        <ProjectTag
-          onClick={handleTagChange}
-          name="Web"
-          isSelected={tag === "Web"}
-        />
-        <ProjectTag
-          onClick={handleTagChange}
-          name="Mobile"
-          isSelected={tag === "Mobile"}
-        />
+        <ProjectTag onClick={handleTagChange} name="All" isSelected={tag === "All"} />
+        <ProjectTag onClick={handleTagChange} name="Web" isSelected={tag === "Web"} />
+        <ProjectTag onClick={handleTagChange} name="Mobile" isSelected={tag === "Mobile"} />
       </div>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
         {filteredProjects.map((project, index) => (
           <motion.li
-            key={index}
+            key={project.id}
             variants={cardVariants}
             initial="initial"
             animate={isInView ? "animate" : "initial"}
             transition={{ duration: 0.3, delay: index * 0.4 }}
           >
             <ProjectCard
-              key={project.id}
               title={project.title}
               description={project.description}
               imgUrl={project.image}
